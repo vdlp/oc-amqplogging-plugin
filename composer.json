@@ -1,0 +1,23 @@
+{
+    "name": "vdlp/oc-amqplogging-plugin",
+    "type": "october-plugin",
+    "description": "Extend October CMS logging with an AMQP driver",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Van der Let & Partners",
+            "email": "octobercms@vdlp.nl"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-amqp": "*",
+        "php-amqplib/php-amqplib": "^2.11"
+    },
+    "archive": {
+        "exclude": [
+            ".gitignore",
+            ".idea/"
+        ]
+    }
+}
