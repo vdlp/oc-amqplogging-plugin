@@ -9,10 +9,14 @@
             "email": "octobercms@vdlp.nl"
         }
     ],
+    "support": {
+        "email": "octobercms@vdlp.nl"
+    },
     "require": {
-        "php": "^7.1||^8.0",
+        "php": "^7.4 || ^8.0",
         "ext-amqp": "*",
-        "php-amqplib/php-amqplib": "^2.11",
+        "laravel/framework": "^6.0",
+        "php-amqplib/php-amqplib": "^2.11 || ^3.0",
         "composer/installers": "^1.0"
     },
     "archive": {
