@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 return [
 
-    'enabled' => (bool) env('VDLP_AMQPLOGGING_ENABLED'),
-
     'parameters' => [
 
         'host' => env('VDLP_AMQPLOGGING_HOST'),
