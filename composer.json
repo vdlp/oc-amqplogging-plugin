@@ -15,7 +15,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-amqp": "*",
-        "laravel/framework": "^6.0",
+        "laravel/framework": "^8.53",
         "php-amqplib/php-amqplib": "^2.11 || ^3.0",
         "composer/installers": "^1.0"
     },
