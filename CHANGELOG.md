@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 - Modify `composer.json` constraint from `october/system` to `october/rain`.
+- Modify `composer.json` to allow `composer/installers` plugin.
 - Modify `Vdlp\AmqpLogging\Classes\AmqpLogger.php` fallback formatter to append new line.
 
 ## [2.1.0] - 2022-05-27
