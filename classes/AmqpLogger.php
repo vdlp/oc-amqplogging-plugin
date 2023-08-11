@@ -65,7 +65,7 @@ final class AmqpLogger
         }
 
         $fallback = new StreamHandler($this->configuration->get('vdlp_amqplogging.parameters.fallback_path'));
-        $fallback->setFormatter(new JsonFormatter(JsonFormatter::BATCH_MODE_JSON, false));
+        $fallback->setFormatter(new JsonFormatter(JsonFormatter::BATCH_MODE_JSON));
 
         $handlers[] = $fallback;
 
