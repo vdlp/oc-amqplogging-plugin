@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Add support for both `monolog/monolog` version `^2.0` and `^3.0`.
+
+## [2.2.0] - 2023-08-11
+
 - Modify `composer.json` constraint from `october/system` to `october/rain`.
 - Modify `composer.json` to allow `composer/installers` plugin.
 - Modify `Vdlp\AmqpLogging\Classes\AmqpLogger.php` fallback formatter to append new line.

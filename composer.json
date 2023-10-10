@@ -16,6 +16,7 @@
         "php": "^8.0",
         "ext-amqp": "*",
         "composer/installers": "^1.0 || ^2.0",
+        "monolog/monolog": "^2.0 || ^3.0",
         "october/rain": "^2.0 || ^3.0",
         "php-amqplib/php-amqplib": "^3.0"
     },

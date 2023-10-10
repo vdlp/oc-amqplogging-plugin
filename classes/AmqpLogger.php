@@ -13,6 +13,7 @@ use Monolog\Handler\AmqpHandler;
 use Monolog\Handler\FallbackGroupHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Monolog\LogRecord;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use Throwable;
 
@@ -46,22 +47,33 @@ final class AmqpLogger
                 $this->configuration->get('vdlp_amqplogging.parameters.exchange')
             );
 
-            $handler->pushProcessor(function (array $data) {
-                $dateTime = $data['datetime'];
+            $handler->pushProcessor(function (mixed $data) {
+                if ($data instanceof LogRecord) {
+                    $data->extra['channel'] = $this->configuration->get('vdlp_amqplogging.parameters.channel');
+                    $data->extra['environment'] = $this->configuration->get('app.env');
 
-                $data['datetime'] = $dateTime instanceof DateTimeInterface
-                    ? $dateTime->format('Y-m-d\TH:i:s.uP')
-                    : $dateTime;
+                    return $data;
+                }
 
-                $data['channel'] = $this->configuration->get('vdlp_amqplogging.parameters.channel');
-                $data['environment'] = $this->configuration->get('app.env');
+                if (is_array($data)) {
+                    $dateTime = $data['datetime'];
+
+                    $data['datetime'] = $dateTime instanceof DateTimeInterface
+                        ? $dateTime->format('Y-m-d\TH:i:s.uP')
+                        : $dateTime;
+
+                    $data['channel'] = $this->configuration->get('vdlp_amqplogging.parameters.channel');
+                    $data['environment'] = $this->configuration->get('app.env');
+
+                    return $data;
+                }
 
                 return $data;
             });
 
             $handlers[] = $handler;
-        } catch (Throwable $e) {
-            //
+        } catch (Throwable) {
+            // @ignoreException
         }
 
         $fallback = new StreamHandler($this->configuration->get('vdlp_amqplogging.parameters.fallback_path'));
