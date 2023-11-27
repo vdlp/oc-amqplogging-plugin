@@ -3,4 +3,6 @@
 
 # Ignore all test and documentation with "export-ignore".
 /.gitattributes              export-ignore
+/.github                     export-ignore
 /.gitignore                  export-ignore
+/.idea                       export-ignore
