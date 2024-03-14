@@ -13,7 +13,7 @@
         "email": "octobercms@vdlp.nl"
     },
     "require": {
-        "php": "^8.0",
+        "php": "^8.0.2",
         "ext-amqp": "*",
         "composer/installers": "^1.0 || ^2.0",
         "monolog/monolog": "^2.0 || ^3.0",
