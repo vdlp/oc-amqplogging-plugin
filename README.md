@@ -8,7 +8,9 @@ Extends October CMS logging with an AMQP driver.
 ## Requirements
 
 - PHP ^8.0
-- October CMS `^3.0` (Laravel `^9.0` or `^10.0`)
+- October CMS 
+  - `^3.0` (Laravel `^9.0` or `^10.0`)
+  - `^4.0` (Laravel `^12.0`)
 
 ## Installation
 

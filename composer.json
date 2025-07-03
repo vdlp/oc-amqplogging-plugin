@@ -13,12 +13,15 @@
         "email": "octobercms@vdlp.nl"
     },
     "require": {
-        "php": "^8.0",
+        "php": "^8.0.2",
         "ext-amqp": "*",
         "composer/installers": "^1.0 || ^2.0",
         "monolog/monolog": "^2.0 || ^3.0",
-        "october/rain": "^3.0",
+        "october/rain": "^3.0 || ^4.0",
         "php-amqplib/php-amqplib": "^3.0"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.42"
     },
     "repositories": [
         {
@@ -28,7 +31,8 @@
     ],
     "config": {
         "allow-plugins": {
-            "composer/installers": true
+            "composer/installers": true,
+            "ergebnis/composer-normalize": true
         }
     }
 }
