@@ -3,6 +3,7 @@
     "description": "Extend October CMS logging with an AMQP driver",
     "license": "GPL-2.0",
     "type": "october-plugin",
+    "abandoned": true,
     "authors": [
         {
             "name": "Van der Let & Partners",
